@@ -1,0 +1,22 @@
+* {
+    color: white;
+    font-family: "Calibri", sans-serif;
+    font-weight: 400;
+}
+
+#weather {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 649px;
+}
+
+#clock {
+    float: right;
+    font-size: 200px;
+    margin-right: 10%;
+}
+
+#greeting {
+    font-size: 75px;
+}
