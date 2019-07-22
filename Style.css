@@ -5,18 +5,19 @@
 }
 
 #weather {
-    position: absolute;
-    margin-top: 10%;
     margin-left: 10%;
+    margin-top: -35%;
     width: 649px;
 }
 
 #clock {
-    float: right;
     font-size: 200px;
-    margin-right: 10%;
+    margin-top: 5%;
+    margin-left: 70%;
 }
 
 #greeting {
-    font-size: 75px;
+    font-size: 100px;
+    margin-left: 60%;
+    margin-top: 30%;
 }
