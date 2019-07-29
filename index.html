@@ -53,11 +53,30 @@
             }
         }(document, 'script', 'weatherwidget-io-js');
     </script>
-<body onload="startTime(); getGreeting()">
-<img alt="bg" src='bg.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
+
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("bg").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "img/img1.jpg";
+        images[1] = "img/img2.jpg";
+        images[2] = "img/img3.jpg";
+        images[3] = "img/img4.jpg";
+    </script>
+
+<body onload="startTime(); getGreeting(); startTimer()">
+<img id="bg" alt="bg" src='img/img1.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
 <div id="clock"></div>
 <div id="greeting"></div>
-<a id="weather" class="weatherwidget-io" href="https://forecast7.com/en/47d388d54/zurich/" data-label_1="Zurich" data-label_2=""
+<a id="weather" class="weatherwidget-io" href="https://forecast7.com/en/47d388d54/zurich/" data-label_1="Zurich"
+   data-label_2=""
    data-icons="Climacons Animated" data-days="5" data-theme="dark" data-basecolor="" data-cloudfill="#ffffff"></a>
 
 
