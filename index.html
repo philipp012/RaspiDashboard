@@ -5,7 +5,6 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="Style.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <meta http-equiv="refresh" content="900">
 
     <script>
         function startTime() {
@@ -40,6 +39,8 @@
                 greeting = "Good Evening, Philipp";
             }
             document.getElementById('greeting').innerHTML = greeting;
+            let t = setTimeout(startTime, 60000);
+
         }
     </script>
     <script>
@@ -56,7 +57,7 @@
 
     <script type = "text/javascript">
         function displayNextImage() {
-            x = (x === images.length - 1) ? 0 : x + 1;
+            var x = images[Math.floor(Math.random()*images.length)];
             document.getElementById("bg").src = images[x];
         }
 
@@ -77,7 +78,7 @@
     </script>
 
 <body onload="startTime(); getGreeting(); startTimer()">
-<img id="bg" alt="bg" src='img/img1.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
+<img id="bg" alt="bg" src='img/img7.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
 <div id="clock"></div>
 <div id="greeting"></div>
 <a id="weather" class="weatherwidget-io" href="https://forecast7.com/en/47d388d54/zurich/" data-label_1="Zurich"
