@@ -59,7 +59,7 @@
             month[10] = "November";
             month[11] = "December";
             let currentMonth = month[d.getMonth()];
-            document.getElementById('date').innerHTML = d.getDay() + '. ' + currentMonth
+            document.getElementById('date').innerHTML = d.getUTCDate() + '. ' + currentMonth
         }
     </script>
     <script>
