@@ -42,6 +42,25 @@
             let t = setTimeout(startTime, 300000);
 
         }
+
+        function getDate() {
+            var d = new Date();
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+            let currentMonth = month[d.getMonth()];
+            document.getElementById('date').innerHTML = d.getDay() + '. ' + currentMonth
+        }
     </script>
     <script>
         !function (d, s, id) {
@@ -74,9 +93,12 @@
         images[7] = "img/img8.jpg";
     </script>
 
-<body onload="startTime(); getGreeting(); startTimer()">
+<body onload="startTime(); getGreeting(); startTimer(); getDate()">
 <img id="bg" alt="bg" src='img/img7.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
-<div id="clock"></div>
+<div id="info">
+    <div id="clock"></div>
+    <div id="date"></div>
+</div>
 <div id="greeting"></div>
 <a id="weather" class="weatherwidget-io" href="https://forecast7.com/en/47d388d54/zurich/" data-label_1="Zurich"
    data-label_2=""

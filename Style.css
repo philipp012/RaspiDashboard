@@ -12,8 +12,17 @@
 
 #clock {
     font-size: 200px;
+}
+
+#info {
     margin-top: 5%;
     margin-left: 70%;
+}
+
+#date {
+    font-size: 50px;
+    float: right;
+    margin-right: 80px;
 }
 
 #greeting {
