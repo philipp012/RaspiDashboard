@@ -59,7 +59,7 @@
             month[10] = "November";
             month[11] = "December";
             let currentMonth = month[d.getMonth()];
-            document.getElementById('date').innerHTML = d.getUTCDate() + '. ' + currentMonth
+            document.getElementById('date').innerHTML = d.getUTCDate() + '. ' + currentMonth;
             let t = setTimeout(getDate, 300000);
 
         }
@@ -78,13 +78,13 @@
 
     <script type = "text/javascript">
         function displayNextImage() {
-            x = (x === images.length - 1) ? 0 : x + 1;
-            document.getElementById("bg").src = images[x];
+            let randInt = (Math.floor(Math.random() * 8));
+            document.getElementById("bg").src = images[randInt];
         }
         function startTimer() {
-            setInterval(displayNextImage, 300000);
+            setInterval(displayNextImage, 1000);
         }
-        var images = [], x = -1;
+        let images = [];
         images[0] = "img/img1.jpg";
         images[1] = "img/img2.jpg";
         images[2] = "img/img3.jpg";
@@ -93,7 +93,8 @@
         images[5] = "img/img6.jpg";
         images[6] = "img/img7.jpg";
         images[7] = "img/img8.jpg";
-    </script>
+        images[8] = "img/img9.jpg";
+        </script>
 
 <body onload="startTime(); getGreeting(); startTimer(); getDate()">
 <img id="bg" alt="bg" src='img/img7.jpg' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
