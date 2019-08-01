@@ -39,7 +39,7 @@
                 greeting = "Good Evening, Philipp";
             }
             document.getElementById('greeting').innerHTML = greeting;
-            let t = setTimeout(startTime, 300000);
+            let t = setTimeout(getGreeting, 300000);
 
         }
 
@@ -60,6 +60,8 @@
             month[11] = "December";
             let currentMonth = month[d.getMonth()];
             document.getElementById('date').innerHTML = d.getUTCDate() + '. ' + currentMonth
+            let t = setTimeout(getDate, 300000);
+
         }
     </script>
     <script>
