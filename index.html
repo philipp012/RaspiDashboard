@@ -28,16 +28,19 @@
         function getGreeting() {
             let today = new Date();
             let h = today.getHours();
-            let greeting = "Hello, Philipp";
-            if (h < 10) {
-                greeting = "Good Morning, Philipp";
+            let greeting = "Hello Philipp";
+            if (h < 11) {
+                greeting = "Good Morning Philipp";
+            } else if (13 < h < 17) {
+                greeting = "Good Afternoon Philipp";
+            } else if (h <= 24) {
+                greeting = "Good Night Philipp";
             }
-            if (13 <= h < 17) {
-                greeting = "Good Afternoon, Philipp";
+            document.getElementById('clock').innerHTML = greeting;
+                let t = setTimeout(getGreeting, 500);
             }
-            if (17 <= h) {
-                greeting = "Good Evening, Philipp";
-            }
+
+
             document.getElementById('greeting').innerHTML = greeting;
             let t = setTimeout(getGreeting, 5000);
 
